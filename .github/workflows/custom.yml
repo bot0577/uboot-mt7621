@@ -96,7 +96,8 @@ jobs:
           tar -xJf Python-2.7.18.tar.xz
           cd Python-2.7.18
           ./configure && sudo make && sudo make install
-          sudo ln -s /usr/bin/python2 /usr/bin/python
+          sudo ln -sf /usr/local/bin/python2.7 /usr/bin/python
+          python --version
 
       - name: Download OpenWrt toolchain
         run: |
