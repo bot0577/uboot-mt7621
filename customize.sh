@@ -117,7 +117,7 @@ else
 fi
 
 make mt7621_build_defconfig
-make CROSS_COMPILE=${Toolchain} STAGING_DIR=${Staging}
+make CROSS_COMPILE=${Toolchain} STAGING_DIR=${Staging} NO_PYTHON=1
 make savedefconfig
 mkdir archive
 cat defconfig > archive/mt7621_defconfig
