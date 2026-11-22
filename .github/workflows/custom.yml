@@ -95,7 +95,7 @@ jobs:
           wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz
           tar -xJf Python-2.7.18.tar.xz
           cd Python-2.7.18
-          ./configure && sudo make && sudo make install
+          CFLAGS="-O2 -std=gnu89" ./configure && sudo make -j4 && sudo make install
           sudo ln -sf /usr/local/bin/python2.7 /usr/bin/python
           python --version
 
